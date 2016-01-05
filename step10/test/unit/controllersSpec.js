@@ -1,14 +1,13 @@
 'use strict';
 
-beforeEach(module('phonecatApp'));
-
 /* jasmine specs for controllers go here */
 describe('PhoneCat controllers', function() {
+
+  beforeEach(module('phonecatApp'));
 
   describe('PhoneListCtrl', function(){
     var scope, ctrl, $httpBackend;
 
-    beforeEach(module('phonecatApp'));
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('phones/phones.json').
@@ -34,12 +33,12 @@ describe('PhoneCat controllers', function() {
   });
 
 
- describe('PhoneDetailCtrl', function(){
+  describe('PhoneDetailCtrl', function(){
     var scope, $httpBackend, ctrl,
         xyzPhoneData = function() {
           return {
             name: 'phone xyz',
-            images: ['image/url1.png', 'image/url2.png']
+                images: ['image/url1.png', 'image/url2.png']
           }
         };
 
@@ -61,3 +60,4 @@ describe('PhoneCat controllers', function() {
       expect(scope.phone).toEqual(xyzPhoneData());
     });
   });
+});

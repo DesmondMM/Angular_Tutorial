@@ -1,9 +1,11 @@
 'use strict';
-angular.module('phonecatApp', ['ngRoute','phonecatControllers','phonecatFilters']);
+
+/* App Module */
+
 var phonecatApp = angular.module('phonecatApp', [
   'ngRoute',
-  'phonecatControllers'
-
+  'phonecatControllers',
+  'phonecatFilters'
 ]);
 
 phonecatApp.config(['$routeProvider',

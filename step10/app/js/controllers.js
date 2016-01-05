@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-var phonecatControllers = angular.module('phonecatControllers', []);
+var phonecatControllers = angular.module('phonecatControllers',[]);
 
 phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http',
   function($scope, $http) {
@@ -24,3 +24,5 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$h
       $scope.mainImageUrl = imageUrl;
     };
   }]);
+
+
